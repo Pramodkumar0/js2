@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <p>1.What is creation phase and execution phase?</p>
+    Ans: creation Phase:<ul>
+        <li>In creation phase memory space is allocated</li>
+        <li>Functions declartions is assigned</li>
+        <li>Variable declartions is assigned</li>
+        <li>'this' binding created</li>
+    </ul>
+    Execution Phase:<ul>
+        <li>JavaScript is executed line by line in the execution phase.</li>
+
+    </ul>
+    <hr>
+    <p>2.What are objects in javascript?</p>
+    Ans: <ul>
+        <li>An object is an unordered collection of key-value pairs</li>
+        <li>Each key-value pair is called a property.</li>
+        <li>its consists of properties and methods</li>
+        <li> object have keys which are converted to string types,the properties and method do not follow the insertion order.</li>
+    </ul>
+    <hr>
+    <p>3.What are function constructors?</p>
+    Ans: <ul>
+        <li>function constructors are use for creating objects in javascript.</li>
+        <li>we can call the constructor directly using "new" keyword</li>
+          <li>Constructor name should starts with capital letter</li>
+          <li>When we call constructor it will create an object</li>
+       EX: <pre>
+            function Object(first, middlename, year)
+             {
+                this.first = first;
+                this.middlename = middlename;
+                this.year = year;
+              }
+              
+              let obj1 = new Object('pramod', 'pramodkumar',1999)
+              </pre>
+    </ul>
+    <hr>
+    <p>4.Explain prototypes?</p>
+    Ans: <ul>
+        <li>/Prototypes are the mechanism by which Javascript objects inherit features from one another.</li>
+          <li>__proto__ object will be created inside the object which will refer to the Prototype of its class constructor or function constructor whenever an object will be created.</li>
+           <li>Using prototype property we can also add more elements to an object which will be accessible by other objects </li>
+    </ul>
+    <hr>
+    <p>5.What is prototype chain?</p>
+    Ans: <ul>
+        <li>Objects created using new keyword, inherit from a prototype called Object.</li>
+        <li>All objects in JavaScript are instances of Object. </li>
+        <li> prototype. That means all the objects in JavaScript, inherit the properties and methods from Object.prototype. This is called Prototype chaining.</li>
+    </ul>
+    <hr>
+    <p>6.Give an example of inheritance using function constructors?</p>
+    
+    <ul>
+
+       EX: <pre>
+            function Employe(name,age) {
+                this.name = name;
+                this.age = age;
+                this.year = 100000
+                
+            }</pre>
+            <li> let employ1= new Employe("pramod",23);
+                <br>
+               &nbsp;&nbsp;&nbsp; Employe {name: 'Safna', age: 20, year: 1999}
+            </li>
+           <br>
+           <li> console.log( new Employe("Safna",20));</li>
+            <br>
+          <li>  console.log(employ1);//Employe {name: 'Althaf', age: 24, year : 1999}</li>
+    </ul>
+    <hr>
+    <p>7.What are callbacks?</p>
+<ul>
+    <li>Function passed to another function as argument</li>
+    <li>This technique allows a function to call another function.</li>
+    <li>A callback function can run after another function has finished.</li>
+</ul>
+EX:
+<pre>
+     
+    function call(a,b,c){
+        console.log("hello")
+        console.log(a,b,c)
+     }
+     call(22,33,44)
+
+</pre>
+  
+
+
+</body>
+</html>
